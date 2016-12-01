@@ -34,29 +34,32 @@
     <div class="jumbotron jumbotron-fluid" id="jumbotron">
       <div class="container">
         <h1 class="display-3">GAME-AZING</h1>
-        <p class="lead">Register with Game-azing today!</p>
-		<p class="lead">Already have an account? <a href="./login.html">Click here to login.</a></p>
+        <p class="lead">Login to access the Game-azing store and manage your account settings.</p>
       </div>
     </div>
 	
-	<div id="registration-form">
+	<div id="login-form">
 	  <form method="POST">
-	  	<h2>Registration</h2>
+	  	<h2>Login</h2>
 	    Username: <input type="text" id="username">
         <br />
         <br />       
         Password: <input type="text" id="password">
 	    <br />
 	    <br />
-		
-        <h6>Enable Two-Factor Authentication (Required)</h3>
-        Country: <select id="authy-countries" name="country-code"></select>
-        <br />
-		<br />
-        Cellphone: <input id="authy-cellphone" type="text" value="" name="authy-cellphone" />
-		<br />
-		<br />
-        <button type="submit">REGISTER</button>
+        <button type="submit">REQUEST TOKEN</button>
+		<!-- Display error message if username/password combination is wrong -->
+      </form>
+	  
+	  <br/>
+	  
+      <form method="POST">
+        <h3>Two-Factor Verification</h3> Token:
+        <input id="authy-token" name="authy-token" type="text" value="" />
+        <br/>
+		<br/>
+		<button type="submit">SUBMIT</button>
+        <!-- <a href="#" id="authy-help">help</a> -->
       </form>
     </div>
 
